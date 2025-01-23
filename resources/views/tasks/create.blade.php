@@ -1,13 +1,15 @@
 <!DOCTYPE html> 
 <html> 
 <head>
-    <meta name=""
-    <title>Crea una nuova attività</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ asset('css/create.css') }}">
+    <title>Crea</title> 
 </head> 
 <body>
-    <div class="container">
+    <div class="create-container">
         <div class="todo-header">
-            <h2>Crea una nuova attività</h2> 
+            <h2>Crea</h2>
+            <img src="{{ asset('images/notebook.png') }}" height="50px" />
         </div>
         <div class="todo-body">
             <form action="{{ route('tasks.store') }}" method="POST"> 
@@ -40,7 +42,7 @@
                     <option value="Studio">Studio</option>
                 </select>
                 <br></br>
-                <button type="submit">Salva</button> 
+                <button class="add"></button> 
                 <a href="{{ route('tasks.index') }}">Torna alla lista</a> 
             </form>
         </div>
