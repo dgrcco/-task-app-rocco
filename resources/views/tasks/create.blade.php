@@ -12,7 +12,7 @@
             <img src="{{ asset('images/notebook.png') }}" height="50px" />
         </div>
         <div class="todo-body">
-            <form action="{{ route('tasks.store') }}" method="POST"> 
+            <form action="{{ route('tasks.store') }}" method="POST" id="taskForm"> 
                 @csrf 
                 <label for="title">Titolo:</label> 
                 <input type="text" id="title" name="title" required> 
@@ -49,5 +49,11 @@
             </form>
         </div>
     </div>
+    <script>
+    document.getElementById('add_task').addEventListener('click', function() {
+        
+        document.getElementById('taskForm').submit();
+        });
+    </script>
 </body> 
 </html>
