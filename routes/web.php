@@ -20,7 +20,7 @@ Route::delete('/tasks/{task}', [TaskController::class,
 'destroy'])->name('tasks.destroy');
 
 //rotte per i commenti (delete e store)
-Route::post('/tasks/{task}/comments/store/', [CommentController::class, 
+Route::post('/tasks/{task}/comments/store', [CommentController::class, 
 'store'])->name('comments.store');
 Route::delete('/tasks/{task}/comments/delete/{comment}', [CommentController::class, 
 'destroy'])->name('comments.destroy');

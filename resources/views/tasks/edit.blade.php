@@ -33,6 +33,13 @@ $task->description }}</textarea>
             <option value="In attesa">In attesa</option>
         </select>
         <br><br>
+        <label for="category">categoria:</label>
+        <select id="category" name="category">
+            <option value="Lavoro">Lavoro</option>
+            <option value="Personale">Personale</option>
+            <option value="Studio">Studio</option>
+        </select>
+        <br></br>
         <button type="submit">Aggiorna</button> 
         <a href="{{ route('tasks.index') }}">Torna alla lista</a> 
     </form> 

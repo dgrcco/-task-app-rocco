@@ -11,6 +11,7 @@
     <p><strong>Descrizione:</strong> {{ $task->description }}</p> 
     <p><strong>Priorità:</strong> {{ $task->priority }}</p> 
     <p><strong>Stato:</strong> {{ $task->status }}</p> 
+    <p><strong>Categoria:</strong> {{ $task->category }}</p> 
     <hr class="solid">
     <p><strong>Sezione Commenti:</strong></p>
     <ul> 

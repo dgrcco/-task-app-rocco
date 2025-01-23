@@ -22,12 +22,12 @@ class CommentController extends Controller
             'comment' => $request->comment,
         ]);
 
-        return redirect()->route('tasks.show', $task->id);  
+        return redirect()->route('tasks.show', $task->id);
     }
 
 
  
-    public function destroy(Task $task, Comment $comment, ) 
+    public function destroy(Task $task, Comment $comment) 
     { 
         $comment->delete(); 
         return redirect()->route('tasks.show', $task->id); 

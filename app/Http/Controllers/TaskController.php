@@ -11,26 +11,41 @@ class TaskController extends Controller
 {
     public function index(Request $request) 
     { 
+        //to do: sistemare le query http in modo più efficente per la gestione / fatto
+        // di più parametri e richieste provenienti da index
         $tasks = Task::query(); 
     
         //prendi tutti i parametri e i valori assegnati
         $input = $request->all();
-        $input = $request->collect();
+        //$input = $request->collect();
+        //dd($input);
 
+        if (isset($input['priority']) && $input['priority'] !== "Tutte") {
+            $tasks = $tasks->where('priority', $input['priority']);
+        }
         
+        if (isset($input['category']) && $input['category'] !== "Tutte") {
+            $tasks = $tasks->where('category', $input['category']);
+        }
+
+        /*
         if (!$input->isEmpty()) {
         
             $priority = $request->input('priority');
+            print($priority . "\n");
+            $category = $request->input('category');
+            print($category);
         
             if ($priority != "Tutte") {    
-                $tasks = $tasks->where('priority', $priority); 
+                $tasks = $tasks->where('priority', $priority)->where('category', $category); 
             }
         }
+        */
 
         $tasks = $tasks->orderBy('priority', 'desc')->get();
 
         return view('tasks.index', compact('tasks'));
-    } 
+    }
  
     public function create() 
     { 
@@ -44,6 +59,7 @@ class TaskController extends Controller
             'description' => 'nullable|string', 
             'priority' => 'nullable|string',
             'status' => 'nullable|string',
+            'category' => 'nullable|string',
         ]); 
  
         Task::create($request->all()); 
@@ -68,6 +84,7 @@ class TaskController extends Controller
             'description' => 'nullable|string', 
             'priority' => 'nullable|string',
             'status' => 'nullable|string',
+            'category' => 'nullable|string',
         ]); 
  
         $task->update($request->all()); 
