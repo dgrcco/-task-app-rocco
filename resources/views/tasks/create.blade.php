@@ -42,8 +42,10 @@
                     <option value="Studio">Studio</option>
                 </select>
                 <br></br>
-                <button class="add"></button> 
-                <a href="{{ route('tasks.index') }}">Torna alla lista</a> 
+                <img src="{{ asset('images/plus.png') }}" id="add_task" height="50px" />
+                <a href="{{ route('tasks.index') }}">
+                    <img src="{{ asset('images/left-arrow.png') }}" height="50px" />
+                </a>
             </form>
         </div>
     </div>
