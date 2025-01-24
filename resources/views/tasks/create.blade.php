@@ -2,7 +2,7 @@
 <html> 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/create.css', 'resources/js/app.js'])
     <title>Crea</title> 
 </head> 
 <body>
@@ -43,9 +43,9 @@
                 </select>
                 <br></br>
                 <div class="button-container">
-                    <img src="{{ asset('images/plus.png') }}" id="add_task" type="button" />
+                    <button id="add_task" type="submit">Aggiungi</button>
                     <a href="{{ route('tasks.index') }}">
-                        <img src="{{ asset('images/left-arrow.png') }}" id="back_button" />
+                        <button id="back_button" type="button">Indietro</button>
                     </a>
                 </div>
             </form>

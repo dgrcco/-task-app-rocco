@@ -1,83 +1,176 @@
-
-body {
-  background: rgb(237, 157, 101);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Reset some default styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-
-.create-container {
-  background: #ffffff;
-  padding: 15px; 
-  width: 450px; 
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-size: 14px; 
-}
-
-
-.todo-header {
+/* Body and global styles */
+body {
+  background-color: #f5f6fa;
+  color: #333;
+  padding: 40px 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 10px; 
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Main container for Create page */
+.create-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.create-container:hover {
+  transform: translateY(-10px);
+}
+
+/* Header */
+.todo-header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .todo-header h2 {
-  font-size: 22px; 
-  margin-right: 10px; 
+  font-size: 36px;
+  color: #2d3436;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .todo-header img {
-  height: 40px; 
-  width: 40px;
+  max-width: 80px;
+  margin-top: 10px;
+  background-color: transparent;
 }
 
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+/* Labels */
 label {
-  font-size: 14px;
+  font-size: 16px;
   color: #555;
   margin-bottom: 5px;
 }
 
+/* Input, Textarea, and Select Styling */
 input,
 textarea,
 select {
-  width: 100%;
-  padding: 8px;
-  font-size: 14px;
+  padding: 12px 18px;
+  font-size: 16px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 10px; 
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  color: #555;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #6c5ce7;
+  background-color: #fff;
+}
+
+/* Textarea */
 textarea {
-  resize: none;
-  height: 60px;
+  resize: vertical;
+  min-height: 120px;
 }
 
+/* Contenitore dei bottoni */
 .button-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 10px; 
+  gap: 15px;
+  margin-top: 20px;
 }
 
-#add_task,
-#back_button {
+/* Bottone "Aggiungi" */
+#add_task {
+  padding: 12px 24px;
+  background-color: #6c5ce7;  /* Viola */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  height: 40px; 
-  width: 40px;
-  border-radius: 50%;
-  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;  /* Cambiato da 48% a 100% */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#add_task:hover,
+/* Effetto hover per "Aggiungi" */
+#add_task:hover {
+  background-color: #4e4b87;  /* Colore più scuro per hover */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Bottone "Indietro" */
+#back_button {
+  padding: 12px 24px;
+  background-color: #d63031;  /* Rosso */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;  /* Cambiato da 48% a 100% */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Effetto hover per "Indietro" */
 #back_button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #e74c3c;  /* Colore più scuro per hover */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenitore dei bottoni */
+.button-container {
+  display: flex;
+  flex-direction: column;  /* Cambiato da row a column */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Responsiveness per schermi piccoli */
+@media (max-width: 768px) {
+  .create-container {
+    padding: 20px;
+  }
+
+  form {
+    gap: 15px;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+  }
+
+  #add_task,
+  #back_button {
+    width: 100%; /* Bottone "Indietro" occupa il 100% dello spazio */
+    height: 50px;
+  }
 }
