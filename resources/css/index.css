@@ -1,4 +1,4 @@
-/* Reset some default styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* Body and global styles */
+
 body {
     background-color: #f5f6fa;
     color: #333;
@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
 }
 
-/* Main container */
+
 .index-container {
     background-color: #ffffff;
     border-radius: 12px;
@@ -32,7 +32,7 @@ body {
     transform: translateY(-10px);
 }
 
-/* Header */
+
 .todo-header {
     text-align: center;
     margin-bottom: 40px;
@@ -50,7 +50,7 @@ body {
     margin-top: 10px;
 }
 
-/* Form */
+
 form {
     display: flex;
     justify-content: space-between;
@@ -81,7 +81,7 @@ select:focus {
     background-color: #fff;
 }
 
-/* Create new task link */
+
 a[href$='create'] {
     display: inline-block;
     background-color: #6c5ce7;
@@ -100,7 +100,7 @@ a[href$='create']:hover {
     transform: translateY(-5px);
 }
 
-/* Task list styling */
+
 ul {
     list-style: none;
     padding: 0;
@@ -155,14 +155,13 @@ button:hover {
     transform: translateY(-3px);
 }
 
-/* Empty message */
+
 li:empty {
     text-align: center;
     font-style: italic;
     color: #aaa;
 }
 
-/* Responsiveness for small screens */
 @media (max-width: 768px) {
     .index-container {
         padding: 20px;
