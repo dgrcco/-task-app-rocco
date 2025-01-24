@@ -2,14 +2,14 @@
 <html> 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ asset('css/create.css') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Crea</title> 
 </head> 
 <body>
     <div class="create-container">
         <div class="todo-header">
             <h2>Crea</h2>
-            <img src="{{ asset('images/notebook.png') }}" height="50px" />
+            <img src="{{ asset('images/notebook.png') }}" />
         </div>
         <div class="todo-body">
             <form action="{{ route('tasks.store') }}" method="POST" id="taskForm"> 
@@ -42,18 +42,12 @@
                     <option value="Studio">Studio</option>
                 </select>
                 <br></br>
-                <img src="{{ asset('images/plus.png') }}" id="add_task" height="50px" />
+                <img src="{{ asset('images/plus.png') }}" id="add_task" height="50px" type="button"/>
                 <a href="{{ route('tasks.index') }}">
                     <img src="{{ asset('images/left-arrow.png') }}" height="50px" />
                 </a>
             </form>
         </div>
     </div>
-    <script>
-    document.getElementById('add_task').addEventListener('click', function() {
-        
-        document.getElementById('taskForm').submit();
-        });
-    </script>
 </body> 
 </html>
