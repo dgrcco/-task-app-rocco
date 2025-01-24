@@ -1,4 +1,4 @@
-/* Resetta gli stili predefiniti */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* Corpo della pagina */
+
 body {
     background-color: #f5f6fa;
     color: #333;
@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
 }
 
-/* Contenitore principale */
+
 .show-container {
     background-color: #ffffff;
     border-radius: 12px;
@@ -32,7 +32,7 @@ body {
     transform: translateY(-10px);
 }
 
-/* Header */
+
 .todo-header {
     text-align: center;
     margin-bottom: 30px;
@@ -44,7 +44,7 @@ body {
     color: #2d3436;
 }
 
-/* Corpo del contenuto */
+
 .todo-body {
     margin-top: 20px;
 }
@@ -59,7 +59,7 @@ body {
     color: #2d3436;
 }
 
-/* Sezione commenti */
+
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -77,7 +77,7 @@ ul li p {
     margin: 5px 0;
 }
 
-/* Pulsanti principali */
+
 button {
     padding: 10px 15px;
     background-color: #6c5ce7;
@@ -96,7 +96,7 @@ button:hover {
     transform: translateY(-3px);
 }
 
-/* Bottone "Elimina Task" */
+
 .delete-button {
     padding: 8px 16px;
     background-color: #d63031;
@@ -114,7 +114,7 @@ button:hover {
     transform: translateY(-3px);
 }
 
-/* Link */
+
 a {
     display: inline-block;
     text-decoration: none;
@@ -130,7 +130,7 @@ a:hover {
     transform: translateY(-3px);
 }
 
-/* Bottoni come link */
+
 .link-button {
     display: inline-block;
     text-decoration: none;
@@ -149,13 +149,13 @@ a:hover {
     transform: translateY(-3px);
 }
 
-/* Linea divisoria */
+
 hr.solid {
     border-top: 1px solid #ddd;
     margin: 20px 0;
 }
 
-/* Textarea */
+
 textarea {
     width: 100%;
     padding: 12px 15px;
@@ -176,7 +176,7 @@ textarea:focus {
     background-color: #fff;
 }
 
-/* Form */
+
 form {
     margin-top: 15px;
 }
@@ -186,7 +186,7 @@ form button {
     width: 100%;
 }
 
-/* Media query per dispositivi mobili */
+
 @media (max-width: 768px) {
     .show-container {
         padding: 20px;
