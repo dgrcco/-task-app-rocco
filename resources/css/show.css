@@ -1,0 +1,203 @@
+/* Resetta gli stili predefiniti */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Corpo della pagina */
+body {
+    background-color: #f5f6fa;
+    color: #333;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Contenitore principale */
+.show-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.show-container:hover {
+    transform: translateY(-10px);
+}
+
+/* Header */
+.todo-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.todo-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d3436;
+}
+
+/* Corpo del contenuto */
+.todo-body {
+    margin-top: 20px;
+}
+
+.todo-body p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.todo-body strong {
+    color: #2d3436;
+}
+
+/* Sezione commenti */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+ul li p {
+    margin: 5px 0;
+}
+
+/* Pulsanti principali */
+button {
+    padding: 10px 15px;
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #4e4b87;
+    transform: translateY(-3px);
+}
+
+/* Bottone "Elimina Task" */
+.delete-button {
+    padding: 8px 16px;
+    background-color: #d63031;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+.delete-button:hover {
+    background-color: #e74c3c;
+    transform: translateY(-3px);
+}
+
+/* Link */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #0984e3;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #6c5ce7;
+    transform: translateY(-3px);
+}
+
+/* Bottoni come link */
+.link-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #6c5ce7;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.link-button:hover {
+    background-color: #4e4b87;
+    transform: translateY(-3px);
+}
+
+/* Linea divisoria */
+hr.solid {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    color: #555;
+    resize: vertical;
+    min-height: 100px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #6c5ce7;
+    background-color: #fff;
+}
+
+/* Form */
+form {
+    margin-top: 15px;
+}
+
+form button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    .show-container {
+        padding: 20px;
+    }
+
+    .todo-header h1 {
+        font-size: 24px;
+    }
+
+    button,
+    textarea {
+        font-size: 14px;
+    }
+}
