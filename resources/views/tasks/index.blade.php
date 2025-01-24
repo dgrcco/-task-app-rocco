@@ -9,6 +9,7 @@
     <div class="index-container">
         <div class="todo-header">
             <h2>To-Do List</h2>
+            <img src="{{ asset('images/notebook.png') }}" class="header-image" />
             <!-- immagine-->
         </div>
         <div class="todo-body">

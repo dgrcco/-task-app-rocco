@@ -9,7 +9,6 @@
     <div class="create-container">
         <div class="todo-header">
             <h2>Crea</h2>
-            <img src="{{ asset('images/notebook.png') }}" />
         </div>
         <div class="todo-body">
             <form action="{{ route('tasks.store') }}" method="POST" id="taskForm"> 

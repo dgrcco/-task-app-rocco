@@ -45,12 +45,6 @@ body {
   margin-bottom: 10px;
 }
 
-.todo-header img {
-  max-width: 80px;
-  margin-top: 10px;
-  background-color: transparent;
-}
-
 
 form {
   display: flex;
